@@ -14,5 +14,5 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    """ Test function """
+    """Test function"""
     return {"Hello": "World"}
