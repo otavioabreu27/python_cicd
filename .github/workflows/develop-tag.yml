@@ -25,7 +25,6 @@ jobs:
         run: echo "TAG=$(git tag --points-at ${{ github.sha }})" >> $GITHUB_ENV
 
       - name: Build and push Docker image
-        if: startsWith(steps.set-tag.outputs.TAG, 'v')
         uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
         with:
           context: ${{ github.workspace }}
