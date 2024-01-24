@@ -22,7 +22,7 @@ jobs:
 
       - name: Get the tag from the commit
         id: set-tag
-        run: echo "TAG=$(git tag --points-at ${{ github.sha }})" >> $GITHUB_ENV
+        run: echo "TAG=otavioabreu27/python_cicd:$(git tag --points-at ${{ github.sha }})" >> $GITHUB_ENV
         shell: bash
 
       - name: Build and push Docker image
