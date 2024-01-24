@@ -32,5 +32,5 @@ jobs:
           file: Dockerfile
           push: true
           tags: |
-            otavioabreu27/python_cicd:${{ env.TAG }}
+            ${{ env.TAG }}
           labels: otavioabreu27/python_cicd
