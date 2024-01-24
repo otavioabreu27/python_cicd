@@ -27,7 +27,10 @@ jobs:
             images: otavioabreu27/python_cicd
         
       - name: Get the tag from the commit
-        run: echo "::set-env name=TAG::$(git tag --points-at ${{ github.sha }})"
+        run: |
+          TAG=$(git tag --points-at ${{ github.sha }})
+          echo "TAG=$TAG" >> $GITHUB_ENV
+    
             
       - name: Build and push Docker image
         if: startsWith(env.TAG, 'develop')
