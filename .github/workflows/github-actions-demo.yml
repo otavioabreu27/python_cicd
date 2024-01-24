@@ -15,5 +15,5 @@ jobs:
       - name: List files in the repository
         run: |
           echo "Searching for credentials "
-          ./${{github.workspace}}/check_cred.sh ${{ secrets.CREDARGUMENTS }}
+          ${{github.workspace}}/check_cred.sh ${{ secrets.CREDARGUMENTS }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
