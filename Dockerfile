@@ -2,7 +2,7 @@ from python:alpine3.19
 
 workdir /app
 
-copy main.py .
+copy ./src/main.py .
 
 copy requirements.txt .
 
